@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+	--linear: linear-gradient(90deg, #be5eff 0%, #5a34ff 100%);
+	--text-linear: linear-gradient(
+		45deg,
+		#291e69 0%,
+		#beb8f4 50.52%,
+		#291e69 100%
+	);
+	--card-bg-color: rgba(11, 17, 55, 0.4);
+	--container-px: 60px;
+	--border-radius: 20px;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+	line-height: 1.5;
+	font-weight: 400;
+	font-size: 16px;
+	color-scheme: light dark;
+	font-synthesis: none;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-text-size-adjust: 100%;
+}
+
+a,
+button {
+	all: unset;
+}
+
+body {
+	@apply bg-page;
+}
+
+.container {
+	@apply px-[var(--container-px)] max-w-full;
+}
+
+section {
+	min-width: calc(100vw - var(--container-px) * 2);
+	min-height: 100vh;
+	margin-bottom: 60px;
+	padding: 0px 10% 80px;
+}
+
+.bgLight {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 60%;
+	height: 60%;
+	background: #8000ff;
+	opacity: 0.3;
+	z-index: -1;
+	filter: blur(40px);
+}
+
+.text-secondary {
+	font-size: 16px;
+	line-height: 24px;
+	color: #ffffff;
+	opacity: 0.7;
+}

@@ -1,0 +1,59 @@
+@mixin linear-text-pink {
+	background: linear-gradient(90deg, #be5eff 0%, #5a34ff 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-clip: text;
+	text-fill-color: transparent;
+}
+
+@mixin linear-text-grey {
+	background: linear-gradient(45deg, #291e69 0%, #beb8f4 50.52%, #291e69 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-clip: text;
+	text-fill-color: transparent;
+}
+
+@mixin layout-grad {
+	background: linear-gradient(
+		90deg,
+		rgba(190, 94, 255, 0.7) 0%,
+		rgba(90, 52, 255, 0.7) 100%
+	);
+	filter: blur(250px);
+}
+
+@mixin title {
+	font-weight: 500;
+	font-size: 64px;
+	line-height: 77px;
+	color: #ffffff;
+
+	@media (max-width: 1600px) {
+		font-size: 58px;
+		line-height: 60px;
+	}
+}
+
+@mixin title-s {
+	font-weight: 600;
+	font-size: 32px;
+	line-height: 48px;
+
+	@media (max-width: 1600px) {
+		font-size: 30px;
+		line-height: 40px;
+	}
+}
+
+@mixin bg-light {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 60%;
+	height: 60%;
+	background: #8000ff;
+	opacity: 0.25;
+	z-index: -1;
+	filter: blur(60px);
+}

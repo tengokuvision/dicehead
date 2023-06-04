@@ -1,0 +1,51 @@
+@import '../../Mixins.scss';
+
+.wrapper {
+	@apply mt-[90px] flex justify-center items-center w-full relative;
+}
+
+.description {
+	@apply w-[50%] bg-[var(--card-bg-color)] flex flex-col gap-12 py-10 px-20 relative overflow-hidden;
+	border-top-left-radius: var(--border-radius);
+	border-bottom-left-radius: var(--border-radius);
+	height: 80%;
+
+	&__title {
+		@include linear-text-grey;
+		@include title-s;
+	}
+
+	.bgLight {
+		overflow: hidden;
+		@include bg-light;
+	}
+}
+
+.photo {
+	@apply w-[50%] z-10;
+
+	img {
+		@apply w-full h-full;
+		border-radius: var(--border-radius);
+	}
+}
+
+.footer {
+	@apply flex justify-between;
+
+	.imgWrapper {
+		@apply flex items-center gap-2;
+	}
+
+	.logo {
+		@include linear-text-pink;
+	}
+
+	.controls {
+		@apply flex gap-8;
+
+		img {
+			cursor: pointer;
+		}
+	}
+}

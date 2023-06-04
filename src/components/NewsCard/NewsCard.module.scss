@@ -1,0 +1,5 @@
+@import '../../Mixins.scss';
+
+.heading {
+	@include title-s;
+}

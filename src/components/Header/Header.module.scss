@@ -1,0 +1,47 @@
+@import '../../Mixins.scss';
+
+header {
+	@apply flex py-5 justify-between relative;
+}
+
+nav {
+	@apply flex items-center gap-[135px];
+
+	img,
+	a {
+		cursor: pointer;
+		padding: 5px;
+		font-weight: 600;
+		font-size: 20px;
+		line-height: 28px;
+	}
+
+	a {
+		&:hover {
+			@include linear-text-pink;
+		}
+	}
+}
+
+.login {
+	@apply flex justify-center items-center gap-[10px];
+	cursor: pointer;
+
+	&__wrapper {
+		@apply flex items-center gap-[38px];
+	}
+
+	span {
+		@include linear-text-pink;
+	}
+}
+
+.gradient {
+	@include layout-grad;
+	width: 294px;
+	height: 295px;
+	position: absolute;
+	top: -115px;
+	right: 100px;
+	z-index: -1;
+}
